@@ -28,6 +28,22 @@ class Emojipedia
         return $this->parse((string) $response->getBody());
     }
 
+    public function category($slug)
+    {
+        $response = $this->client->get(self::BASE_URI . '/' . $slug);
+
+        $crawler = new Crawler((string) $response->getBody());
+
+        $emojis = $crawler->filter('div.content > ul.emoji-list > li')->each(function (Crawler $node) {
+            return [
+                'slug' => trim($node->filter('a')->attr('href'), '/'),
+                'full_name' => $node->text(),
+            ];
+        });
+
+        return collect($emojis);
+    }
+
     protected function parse($📜)
     {
         $🔧 = new Crawler($📜);
@@ -66,7 +82,7 @@ class Emojipedia
         });
 
         $😀 = array_merge($📙, [
-            'representations' => $📚,
+            'representations' => collect($📚),
         ]);
 
         return $😀;
