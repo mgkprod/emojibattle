@@ -6,16 +6,14 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Inter:400,600" rel="stylesheet">
 
-        <!-- Styles -->
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
-
-        <!-- Javascript -->
         <script src="{{ mix('/js/app.js') }}" defer></script>
+
         @routes
     </head>
-    <body>
+    <body class="text-gray-600 bg-gray-100">
         @inertia
     </body>
 </html>

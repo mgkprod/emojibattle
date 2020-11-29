@@ -4730,6 +4730,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['emoji']
 });
@@ -23075,47 +23086,109 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "flex flex-col items-center justify-center h-screen" },
-      [
+  return _c(
+    "div",
+    {
+      staticClass:
+        "container flex flex-col items-center justify-between min-h-screen py-8"
+    },
+    [
+      _c("div"),
+      _vm._v(" "),
+      _c("div", [
+        _c("div", { staticClass: "mb-8 text-center" }, [
+          _c("h1", { staticClass: "mb-2 text-4xl" }, [
+            _vm._v(
+              "\n                " + _vm._s(_vm.emoji.name) + "\n            "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Vote for the worst !")])
+        ]),
+        _vm._v(" "),
         _c(
           "div",
-          { staticClass: "mb-8 text-4xl font-thin text-center text-gray-600" },
-          [
-            _c("div", { staticClass: "mb-2 text-6xl" }, [
-              _vm._v(_vm._s(_vm.emoji.emoji))
-            ]),
-            _vm._v("\n            " + _vm._s(_vm.emoji.name) + "\n        ")
-          ]
-        ),
-        _vm._v(" "),
-        _c("p", [_vm._v(_vm._s(_vm.emoji.description))]),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "flex flex-wrap space-x-2 space-y-2" },
+          { staticClass: "flex flex-wrap justify-center -mx-4 -mt-2" },
           _vm._l(_vm.emoji.representations, function(representation) {
-            return _c("div", { key: representation.vendor.name }, [
-              _c("div", [_vm._v(_vm._s(representation.vendor.name))]),
-              _vm._v(" "),
-              _c("img", {
-                staticClass: "w-48",
-                attrs: {
-                  src: representation.image.src,
-                  alt: representation.image.alt
-                }
-              })
-            ])
+            return _c(
+              "button",
+              {
+                key: representation.vendor.name,
+                staticClass:
+                  "flex flex-col items-center h-48 py-6 m-2 transition transform bg-white rounded-lg shadow-lg cursor-pointer w-36 hover:-translate-y-1 hover:scale-110 hover:shadow-xl focus:outline-none"
+              },
+              [
+                _c("img", {
+                  staticClass: "px-8 mb-auto",
+                  attrs: {
+                    src: representation.image.src,
+                    alt: representation.image.alt
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "px-4" }, [
+                  _vm._v(_vm._s(representation.vendor.name))
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "px-4 text-xs font-semibold text-gray-400 uppercase"
+                  },
+                  [_vm._v("0 vote(s)")]
+                )
+              ]
+            )
           }),
           0
         )
-      ]
-    )
-  ])
+      ]),
+      _vm._v(" "),
+      _vm._m(0)
+    ]
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-sm text-center text-gray-400" }, [
+      _vm._v("\n        Base emoji data fetched from "),
+      _c(
+        "a",
+        {
+          staticClass: "underline hover:no-underline",
+          attrs: { href: "https://emojipedia.org/", target: "_blank" }
+        },
+        [_vm._v("Emojipedia")]
+      ),
+      _c("br"),
+      _vm._v("\n        Handcrafted by "),
+      _c(
+        "a",
+        {
+          staticClass: "underline hover:no-underline",
+          attrs: { href: "https://mgk.dev/", target: "_blank" }
+        },
+        [_vm._v("MGK")]
+      ),
+      _vm._v(" - "),
+      _c(
+        "a",
+        {
+          staticClass: "underline hover:no-underline",
+          attrs: {
+            href: "https://github.com/mgkprod/emojibattle",
+            target: "_blank"
+          }
+        },
+        [_vm._v("GitHub")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
