@@ -28,31 +28,31 @@ class Emojipedia
         return $this->parse((string) $response->getBody());
     }
 
-    protected function parse($body)
+    protected function parse($📜)
     {
-        $crawler = new Crawler($body);
-
-        $emoji = [];
-        $representations = [];
+        $🔧 = new Crawler($📜);
+        $📙 = [];
 
         // Main
-        $emoji['slug'] = trim($crawler->filter('meta[property="og:url"]')->attr('content'), '/');
+        $📙['slug'] = trim($🔧->filter('meta[property="og:url"]')->attr('content'), '/');
 
-        $full_name = $crawler->filter('article > h1')->text();
-        $native_emoji = $crawler->filter('article > h1 > span.emoji')->text();
+        $full_name = $🔧->filter('article > h1')->text();
+        $native_emoji = $🔧->filter('article > h1 > span.emoji')->text();
 
-        $emoji['name'] = trim(str_replace($native_emoji, '', $full_name));
-        $emoji['emoji'] = $native_emoji;
+        $📙['name'] = trim(str_replace($native_emoji, '', $full_name));
+        $📙['emoji'] = $native_emoji;
 
         // Description
-        $description = $crawler->filter('section.description > p')->each(function (Crawler $node) {
+        $description = $🔧->filter('section.description > p')->each(function (Crawler $node) {
             return $node->text();
         });
 
-        $emoji['description'] = implode("\r\n", $description);
+        $📙['description'] = implode("\r\n", $description);
 
         // Representations (vendor-list)
-        $representations = $crawler->filter('section.vendor-list > ul > li')->each(function (Crawler $node) {
+        $📚 = [];
+
+        $📚 = $🔧->filter('section.vendor-list > ul > li')->each(function (Crawler $node) {
             return [
                 'vendor' => [
                     'slug' => trim($node->filter('.vendor-info > h2 > a')->attr('href'), '/'),
@@ -65,8 +65,10 @@ class Emojipedia
             ];
         });
 
-        return array_merge($emoji, [
-            'representations' => $representations,
+        $😀 = array_merge($📙, [
+            'representations' => $📚,
         ]);
+
+        return $😀;
     }
 }
