@@ -29,6 +29,19 @@ class HomeController extends Controller
         return inertia('show', compact('emoji'));
     }
 
+    public function hallOfShame()
+    {
+        $representations = Representation::query()
+            ->where('down_votes_count', '>', '0')
+            ->orderBy('down_votes_count', 'DESC')
+            ->with('vendor')
+            ->with('emoji')
+            ->limit(20)
+            ->get();
+
+        return inertia('hall-of-shame', compact('representations'));
+    }
+
     public function submit(Request $request)
     {
         // Find representation

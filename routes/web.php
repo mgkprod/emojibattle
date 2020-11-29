@@ -12,6 +12,8 @@
 */
 
 Route::get('/', '\App\Http\Controllers\HomeController@home')->name('home');
-Route::get('/{slug}', '\App\Http\Controllers\HomeController@show')->name('show');
+Route::get('/hall-of-shame', '\App\Http\Controllers\HomeController@hallOfShame')->name('hall-of-shame');
 
 Route::post('/', '\App\Http\Controllers\HomeController@submit');
+
+Route::get('/{slug}', '\App\Http\Controllers\HomeController@show')->name('show');

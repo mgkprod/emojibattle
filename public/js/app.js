@@ -4700,6 +4700,65 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/hall-of-shame.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/hall-of-shame.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['representations'],
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/show.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/show.vue?vue&type=script&lang=js& ***!
@@ -4709,6 +4768,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -23086,6 +23146,157 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/hall-of-shame.vue?vue&type=template&id=2ea0e16e&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/hall-of-shame.vue?vue&type=template&id=2ea0e16e& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass:
+        "container flex flex-col items-center justify-between min-h-screen py-8"
+    },
+    [
+      _c("div"),
+      _vm._v(" "),
+      _c("div", [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "flex flex-wrap justify-center mb-8 -mx-4 -mt-2" },
+          _vm._l(_vm.representations, function(representation) {
+            return _c(
+              "inertia-link",
+              {
+                key: representation.id,
+                staticClass:
+                  "flex flex-col items-center h-64 py-6 m-2 transition transform bg-white rounded-lg shadow-lg cursor-pointer w-36 hover:-translate-y-1 hover:scale-110 hover:shadow-xl focus:outline-none",
+                attrs: { href: _vm.$route("show", representation.emoji.slug) }
+              },
+              [
+                _c("img", {
+                  staticClass: "px-8 mb-auto",
+                  attrs: { src: representation.src, alt: representation.alt }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "px-4 mb-4 text-center" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(representation.emoji.name) +
+                      "\n                    "
+                  ),
+                  _c("div", { staticClass: "text-sm" }, [
+                    _vm._v(
+                      "\n                        as seen by\n                    "
+                    )
+                  ]),
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(representation.vendor.name) +
+                      "\n                "
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "px-4 text-xs font-semibold uppercase",
+                    class: {
+                      "text-gray-300": representation.down_votes_count == 0,
+                      "text-gray-400": representation.down_votes_count
+                    }
+                  },
+                  [_vm._v(_vm._s(representation.down_votes_count) + " vote(s)")]
+                )
+              ]
+            )
+          }),
+          1
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "text-sm text-center text-gray-400" },
+        [
+          _c(
+            "inertia-link",
+            {
+              staticClass: "underline hover:no-underline",
+              attrs: { href: _vm.$route("home") }
+            },
+            [_vm._v("Home")]
+          ),
+          _c("br"),
+          _vm._v("\n        Base emoji data fetched from "),
+          _c(
+            "a",
+            {
+              staticClass: "underline hover:no-underline",
+              attrs: { href: "https://emojipedia.org/", target: "_blank" }
+            },
+            [_vm._v("Emojipedia")]
+          ),
+          _c("br"),
+          _vm._v("\n        Handcrafted by "),
+          _c(
+            "a",
+            {
+              staticClass: "underline hover:no-underline",
+              attrs: { href: "https://mgk.dev/", target: "_blank" }
+            },
+            [_vm._v("MGK")]
+          ),
+          _vm._v(" - "),
+          _c(
+            "a",
+            {
+              staticClass: "underline hover:no-underline",
+              attrs: {
+                href: "https://github.com/mgkprod/emojibattle",
+                target: "_blank"
+              }
+            },
+            [_vm._v("GitHub")]
+          )
+        ],
+        1
+      )
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mb-8 text-center" }, [
+      _c("h1", { staticClass: "mb-2 text-4xl" }, [
+        _vm._v("\n                Hall of Shame\n            ")
+      ]),
+      _vm._v(" "),
+      _c("p", [_vm._v("You have voted !")])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/show.vue?vue&type=template&id=a9e94934&":
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/pages/show.vue?vue&type=template&id=a9e94934& ***!
@@ -23182,50 +23393,57 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _vm._m(0)
+      _c(
+        "div",
+        { staticClass: "text-sm text-center text-gray-400" },
+        [
+          _c(
+            "inertia-link",
+            {
+              staticClass: "underline hover:no-underline",
+              attrs: { href: _vm.$route("hall-of-shame") }
+            },
+            [_vm._v("Hall of Shame")]
+          ),
+          _c("br"),
+          _vm._v("\n        Base emoji data fetched from "),
+          _c(
+            "a",
+            {
+              staticClass: "underline hover:no-underline",
+              attrs: { href: "https://emojipedia.org/", target: "_blank" }
+            },
+            [_vm._v("Emojipedia")]
+          ),
+          _c("br"),
+          _vm._v("\n        Handcrafted by "),
+          _c(
+            "a",
+            {
+              staticClass: "underline hover:no-underline",
+              attrs: { href: "https://mgk.dev/", target: "_blank" }
+            },
+            [_vm._v("MGK")]
+          ),
+          _vm._v(" - "),
+          _c(
+            "a",
+            {
+              staticClass: "underline hover:no-underline",
+              attrs: {
+                href: "https://github.com/mgkprod/emojibattle",
+                target: "_blank"
+              }
+            },
+            [_vm._v("GitHub")]
+          )
+        ],
+        1
+      )
     ]
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-sm text-center text-gray-400" }, [
-      _vm._v("\n        Base emoji data fetched from "),
-      _c(
-        "a",
-        {
-          staticClass: "underline hover:no-underline",
-          attrs: { href: "https://emojipedia.org/", target: "_blank" }
-        },
-        [_vm._v("Emojipedia")]
-      ),
-      _c("br"),
-      _vm._v("\n        Handcrafted by "),
-      _c(
-        "a",
-        {
-          staticClass: "underline hover:no-underline",
-          attrs: { href: "https://mgk.dev/", target: "_blank" }
-        },
-        [_vm._v("MGK")]
-      ),
-      _vm._v(" - "),
-      _c(
-        "a",
-        {
-          staticClass: "underline hover:no-underline",
-          attrs: {
-            href: "https://github.com/mgkprod/emojibattle",
-            target: "_blank"
-          }
-        },
-        [_vm._v("GitHub")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -35403,6 +35621,7 @@ module.exports = function(module) {
 
 var map = {
 	"./components/form-input.vue": "./resources/js/components/form-input.vue",
+	"./pages/hall-of-shame.vue": "./resources/js/pages/hall-of-shame.vue",
 	"./pages/show.vue": "./resources/js/pages/show.vue"
 };
 
@@ -35583,6 +35802,8 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
+	"./hall-of-shame": "./resources/js/pages/hall-of-shame.vue",
+	"./hall-of-shame.vue": "./resources/js/pages/hall-of-shame.vue",
 	"./show": "./resources/js/pages/show.vue",
 	"./show.vue": "./resources/js/pages/show.vue"
 };
@@ -35606,6 +35827,75 @@ webpackContext.keys = function webpackContextKeys() {
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
 webpackContext.id = "./resources/js/pages sync recursive ^\\.\\/.*$";
+
+/***/ }),
+
+/***/ "./resources/js/pages/hall-of-shame.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/pages/hall-of-shame.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _hall_of_shame_vue_vue_type_template_id_2ea0e16e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hall-of-shame.vue?vue&type=template&id=2ea0e16e& */ "./resources/js/pages/hall-of-shame.vue?vue&type=template&id=2ea0e16e&");
+/* harmony import */ var _hall_of_shame_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hall-of-shame.vue?vue&type=script&lang=js& */ "./resources/js/pages/hall-of-shame.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _hall_of_shame_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _hall_of_shame_vue_vue_type_template_id_2ea0e16e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _hall_of_shame_vue_vue_type_template_id_2ea0e16e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/pages/hall-of-shame.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/pages/hall-of-shame.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/pages/hall-of-shame.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_hall_of_shame_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./hall-of-shame.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/hall-of-shame.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_hall_of_shame_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/pages/hall-of-shame.vue?vue&type=template&id=2ea0e16e&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/pages/hall-of-shame.vue?vue&type=template&id=2ea0e16e& ***!
+  \*****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hall_of_shame_vue_vue_type_template_id_2ea0e16e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./hall-of-shame.vue?vue&type=template&id=2ea0e16e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/pages/hall-of-shame.vue?vue&type=template&id=2ea0e16e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hall_of_shame_vue_vue_type_template_id_2ea0e16e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hall_of_shame_vue_vue_type_template_id_2ea0e16e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
