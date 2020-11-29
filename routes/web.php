@@ -11,4 +11,4 @@
 |
 */
 
-Route::inertia('/', 'welcome')->name('index');
+Route::get('/', '\App\Http\Controllers\HomeController@index')->name('index');
