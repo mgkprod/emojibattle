@@ -23166,7 +23166,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "text-center" },
+          { staticClass: "mb-8 text-center" },
           [
             _c(
               "inertia-link",

@@ -26,7 +26,7 @@
                 </button>
             </div>
 
-            <div class="text-center">
+            <div class="mb-8 text-center">
                 <inertia-link :href="$route('home')" class="inline-block px-4 py-2 mx-auto text-sm font-bold text-white bg-blue-500 rounded-lg shadow-lg">or skip to the next emoji !</inertia-link>
             </div>
         </div>
