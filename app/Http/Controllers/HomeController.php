@@ -41,15 +41,17 @@ class HomeController extends Controller
         $representation = Representation::findOrFail($request->representation_id);
 
         // Save vote
-        Vote::firstOrCreate([
+        $vote = $representation->votes()->firstOrCreate([
             'representation_id' => $representation->id,
             'ip' => $request->ip(),
             'user_agent' => $request->userAgent(),
         ]);
 
         // Caching
-        $representation->down_votes_count++;
-        $representation->save();
+        if ($vote->wasRecentlyCreated) {
+            $representation->down_votes_count++;
+            $representation->save();
+        }
 
         return redirect()->route('home');
     }
@@ -70,8 +72,7 @@ class HomeController extends Controller
                 'slug' => $o_representation['vendor']['slug'],
             ]);
 
-            $representations[] = Representation::firstOrCreate([
-                'emoji_id' => $emoji->id,
+            $representations[] = $emoji->representations()->firstOrCreate([
                 'vendor_id' => $vendor->id,
                 'src' => $o_representation['image']['src'],
                 'alt' => $o_representation['image']['alt'],

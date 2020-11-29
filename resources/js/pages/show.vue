@@ -19,7 +19,10 @@
                 >
                     <img :src="representation.src" :alt="representation.alt" class="px-8 mb-auto">
                     <div class="px-4">{{ representation.vendor.name }}</div>
-                    <div class="px-4 text-xs font-semibold text-gray-400 uppercase">{{ representation.down_votes_count }} vote(s)</div>
+                    <div
+                        class="px-4 text-xs font-semibold uppercase"
+                        :class="{ 'text-gray-300': representation.down_votes_count == 0, 'text-gray-400': representation.down_votes_count }"
+                    >{{ representation.down_votes_count }} vote(s)</div>
                 </button>
             </div>
 

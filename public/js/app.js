@@ -4746,6 +4746,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['emoji'],
   methods: {
@@ -23147,8 +23150,11 @@ var render = function() {
                 _c(
                   "div",
                   {
-                    staticClass:
-                      "px-4 text-xs font-semibold text-gray-400 uppercase"
+                    staticClass: "px-4 text-xs font-semibold uppercase",
+                    class: {
+                      "text-gray-300": representation.down_votes_count == 0,
+                      "text-gray-400": representation.down_votes_count
+                    }
                   },
                   [_vm._v(_vm._s(representation.down_votes_count) + " vote(s)")]
                 )
