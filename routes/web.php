@@ -11,4 +11,7 @@
 |
 */
 
-Route::get('/', '\App\Http\Controllers\HomeController@index')->name('index');
+Route::get('/', '\App\Http\Controllers\HomeController@home')->name('home');
+Route::get('/{slug}', '\App\Http\Controllers\HomeController@show')->name('show');
+
+Route::post('/', '\App\Http\Controllers\HomeController@submit');

@@ -10,16 +10,21 @@
                 <p>Vote for the worst !</p>
             </div>
 
-            <div class="flex flex-wrap justify-center -mx-4 -mt-2">
+            <div class="flex flex-wrap justify-center mb-8 -mx-4 -mt-2">
                 <button
+                    @click="submit(representation.id)"
                     v-for="representation in emoji.representations"
-                    v-bind:key="representation.vendor.name"
+                    v-bind:key="representation.id"
                     class="flex flex-col items-center h-48 py-6 m-2 transition transform bg-white rounded-lg shadow-lg cursor-pointer w-36 hover:-translate-y-1 hover:scale-110 hover:shadow-xl focus:outline-none"
                 >
-                    <img :src="representation.image.src" :alt="representation.image.alt" class="px-8 mb-auto">
+                    <img :src="representation.src" :alt="representation.alt" class="px-8 mb-auto">
                     <div class="px-4">{{ representation.vendor.name }}</div>
-                    <div class="px-4 text-xs font-semibold text-gray-400 uppercase">0 vote(s)</div>
+                    <div class="px-4 text-xs font-semibold text-gray-400 uppercase">{{ representation.down_votes_count }} vote(s)</div>
                 </button>
+            </div>
+
+            <div class="text-center">
+                <inertia-link :href="$route('home')" class="inline-block px-4 py-2 mx-auto text-sm font-bold text-white bg-blue-500 rounded-lg shadow-lg">or skip to the next emoji !</inertia-link>
             </div>
         </div>
 
@@ -32,6 +37,14 @@
 
 <script>
     export default {
-        props: ['emoji']
+        props: ['emoji'],
+
+        methods: {
+            submit(representation_id){
+                this.$inertia.post(
+                    this.$route('home'), { representation_id }
+                )
+            }
+        }
     }
 </script>
